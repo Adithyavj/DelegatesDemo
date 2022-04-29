@@ -8,11 +8,14 @@ namespace DemoLibrary
 {
     public class ShoppingCartModel
     {
+        public delegate void MentionDiscount(decimal subTotal); // Defining the delegate
         public List<ProductModel> Items { get; set; } = new List<ProductModel>();
 
-        public decimal GenerateTotal()
+        public decimal GenerateTotal(MentionDiscount mentionDiscount) // passing the delegate as parameter to the method
         {
             decimal subTotal = Items.Sum(x => x.Price);
+
+            mentionDiscount(subTotal); // calling the delegate
 
             if (subTotal > 100)
             {
