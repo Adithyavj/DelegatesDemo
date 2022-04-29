@@ -11,28 +11,14 @@ namespace DemoLibrary
         public delegate void MentionDiscount(decimal subTotal); // Defining the delegate
         public List<ProductModel> Items { get; set; } = new List<ProductModel>();
 
-        public decimal GenerateTotal(MentionDiscount mentionDiscount) // passing the delegate as parameter to the method
+        public decimal GenerateTotal(MentionDiscount mentionDiscount, // passing the delegate as parameter to the method
+            Func<List<ProductModel>,decimal,decimal> calculateDiscountedTotal) 
         {
             decimal subTotal = Items.Sum(x => x.Price);
 
             mentionDiscount(subTotal); // calling the delegate
 
-            if (subTotal > 100)
-            {
-                return subTotal * 0.80M; // 20% discount
-            }
-            else if (subTotal > 50)
-            {
-                return subTotal * 0.85M; // 15% discount
-            }
-            else if (subTotal > 10)
-            {
-                return subTotal * 0.90M; // 10% discount
-            }
-            else
-            {
-                return subTotal;
-            }
+            return calculateDiscountedTotal(Items, subTotal); // This returns Total as output
         }
     }
 }
