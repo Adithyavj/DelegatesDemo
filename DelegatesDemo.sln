@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLibrary", "DemoLibrary\DemoLibrary.csproj", "{BDDCF6B5-93E7-4CFE-B014-3421C8BFD33F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormUI", "WinFormUI\WinFormUI.csproj", "{C85F660C-36BA-4F01-A191-D739FD0E0A6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BDDCF6B5-93E7-4CFE-B014-3421C8BFD33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDDCF6B5-93E7-4CFE-B014-3421C8BFD33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDDCF6B5-93E7-4CFE-B014-3421C8BFD33F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C85F660C-36BA-4F01-A191-D739FD0E0A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85F660C-36BA-4F01-A191-D739FD0E0A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85F660C-36BA-4F01-A191-D739FD0E0A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85F660C-36BA-4F01-A191-D739FD0E0A6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
