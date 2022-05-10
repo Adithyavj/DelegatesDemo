@@ -21,7 +21,9 @@ namespace DemoLibrary
 
             tellUserWeAreDiscounting("We are applying your discount");
 
-            return calculateDiscountedTotal(Items, subTotal); // This returns Total as output
+            decimal total = calculateDiscountedTotal(Items, subTotal); // This returns Total as output
+
+            return total;
         }
     }
 }
