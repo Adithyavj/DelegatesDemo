@@ -14,7 +14,7 @@ namespace ConsoleUI
 
             // Create a method to pass in as the parameter to GenerateTotal()
 
-            Console.WriteLine($"The total for the cart is {cart.GenerateTotal(SubTotalAlert, CalculateLeveledDiscount):C2}");
+            Console.WriteLine($"The total for the cart is {cart.GenerateTotal(SubTotalAlert, CalculateLeveledDiscount, AlertUser):C2}");
 
             Console.WriteLine();
             Console.WriteLine("Press any key to exit the application");
@@ -33,6 +33,11 @@ namespace ConsoleUI
         private static void SubTotalAlert(decimal subTotal)
         {
             Console.WriteLine($"The subtotal is {subTotal:C2}");
+        }
+
+        private static void AlertUser(string message)
+        {
+            Console.WriteLine(message);
         }
 
         // Has same structure of the Func<List<ProductModel>,decimal,decimal>
